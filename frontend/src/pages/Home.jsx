@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import WorkoutDetails from "../components/WorkoutDetails";
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
         <div className="home">
             <div className="workouts">
                 {workouts.map((workout) => (
-                    <p key={workout._id}>{workout.title}</p>
+                    <WorkoutDetails key="workout._id" workout={workout} />
                 ))}
             </div>
         </div>
